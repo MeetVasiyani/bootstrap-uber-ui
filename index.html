@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags for character set and responsive design -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Uber Website</title>
+  <!-- External CSS links for Bootstrap and custom fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/uber-move-text" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header section with navigation bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-black p-2.5">
+      <div class="container-fluid">
+        <!-- Brand logo -->
+        <a class="navbar-brand text-white fs-0.5 pt-2.5" style="margin-left: 115px" href="#">Uber</a>
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse p-0.5" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <!-- Navigation buttons -->
+            <button type="button" class="btn btn-dark nav-color border-0 rounded-pill" href="#">
+              Ride
+            </button>
+            <button type="button" class="btn btn-dark nav-color border-0 rounded-pill" href="#">
+              Drive
+            </button>
+            <button type="button" class="btn btn-dark nav-color border-0 rounded-pill" href="#">
+              Business
+            </button>
+            <!-- Dropdown menu for 'About' section -->
+            <div class="dropdown">
+              <button class="btn btn-dark nav-color rounded-pill border-0 dropdown-toggle" type="button"
+                data-bs-toggle="dropdown">
+                About
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <!-- Dropdown items -->
+                <li>
+                  <button class="dropdown-item" href="#">About us</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" href="#">
+                    Our Offerings
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" href="#">
+                    How Uber Works
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" href="#">Impact</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" href="#">
+                    Diversity, equity and inclusion
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" href="#">
+                    Sustainability
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" href="#">Explore</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" href="#">Newsroom</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" href="#">
+                    Investor relations
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" href="#">Autonomous</button>
+                </li>
+                <li><button class="dropdown-item" href="#">Blog</button></li>
+                <li>
+                  <button class="dropdown-item" href="#">Careers</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Additional navigation buttons -->
+        <button type="button" class="btn btn-dark nav-color border-0 rounded-pill" href="#">
+          <i class="bi bi-globe"></i> EN
+        </button>
+        <button type="button" class="btn btn-dark nav-color border-0 rounded-pill" href="#">
+          Help
+        </button>
+        <button type="button" class="btn btn-dark nav-color border-0 rounded-pill" href="#">
+          Log in
+        </button>
+        <button type="button" class="btn btn-dark nav-color border-0 rounded-pill" style="margin-right: 115px" href="#">
+          Sign up
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main style="background-color: #212529">
+    <div class="row">
+      <div class="col-12"><br /><br /></div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+
+      <!-- Left Content Section -->
+      <div class="col-4 pe-5">
+        <h1 class="text fw-bold fs-1">Go anywhere with<br />Uber</h1>
+        <br />
+
+        <!-- Input for pickup location -->
+        <div class="input-group input-group-lg" style="width: 330px">
+          <span class="input-group-text bg-dark border border-end-0" id="basic-addon1">
+            <i class="bi bi-record-circle-fill text-white"></i>
+          </span>
+          <input type="text" class="form-control text-white bg-dark border shadow-none border-start-0"
+            placeholder="Pickup location" />
+        </div>
+        <br />
+
+        <!-- Input for dropoff location -->
+        <div class="input-group input-group-lg" style="width: 330px">
+          <span class="input-group-text bg-dark border border-end-0" id="basic-addon1">
+            <i class="bi bi-square-fill text-white"></i>
+          </span>
+          <input type="text" class="form-control text-white bg-dark border shadow-none border-start-0"
+            placeholder="Dropoff location" />
+        </div>
+        <br />
+
+        <div class="row">
+          <div class="col-4">
+            <!-- Input for date selection -->
+            <div class="input-group input-group-md" style="width: 158px">
+              <span class="input-group-text bg-dark border border-end-0" id="basic-addon1">
+                <i class="bi bi-calendar2-event-fill text-white"></i>
+              </span>
+              <input type="text" class="form-control text-white bg-dark border shadow-none border-start-0"
+                id="dateInputToday" placeholder="Today" onfocus="(this.type='date')"
+                onblur="if(!this.value) {this.type='text';}" />
+            </div>
+          </div>
+
+          <div class="col-4">
+            <!-- Input for time selection -->
+            <div class="input-group input-group-md ps-3" style="width: 170px">
+              <span class="input-group-text bg-dark border border-end-0" id="basic-addon2">
+                <i class="bi bi-clock-fill text-white"></i>
+              </span>
+              <input type="text" class="form-control text-white bg-dark border shadow-none border-start-0"
+                id="dateInputNow" placeholder="Now" onfocus="(this.type='time')"
+                onblur="if(!this.value) {this.type='text';}" />
+            </div>
+          </div>
+
+          <div class="col-4"></div>
+        </div>
+
+        <br />
+
+        <!-- Button to see prices -->
+        <button type="button" class="btn btn-lg btn-dark nav-color">
+          See prices
+        </button>
+      </div>
+
+      <!-- Right Section with embedded Google Map -->
+      <div class="col-4">
+        <iframe class="rounded-1 ps-5"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11860.839429985603!2d69.84393673940005!3d22.36760567095402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395719f67c1ed4af%3A0xaa4cb0bc44bddd0c!2sReliance%20Greens%2C%20Motikhavdi%2C%20Gujarat%20361142!5e0!3m2!1sen!2sin!4v1730824404923!5m2!1sen!2sin"
+          width="570px" height="600" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="col-2"></div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-4 pe-5">
+        <!-- Suggestion card section -->
+        <div class="suggestion-card bg-dark text rounded">
+          <h2>Suggestions</h2>
+          <br />
+          <div class="card bg-custom">
+            <div class="card-body d-flex justify-content-between align-items-start">
+              <div>
+                <h5 class="card-title text">Ride</h5>
+                <p class="card-text text">
+                  Go anywhere with Uber. Request a<br />ride, hop in, and go.
+                </p>
+                <button class="btn btn-dark rounded-pill mt-2">
+                  Details
+                </button>
+              </div>
+              <img src="https://mobile-content.uber.com/launch-experience/ride.png" alt="Car" class="img-fluid"
+                style="height: 120px" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 ps-5"></div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-4 pe-5">
+        <!-- Image section -->
+        <img width="100%"
+          src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_576,w_576/v1684855112/assets/96/4dd3d1-94e7-481e-b28c-08d59353b9e0/original/earner-illustra.png"
+          alt="Image" />
+      </div>
+      <div class="col-4 ps-5 pt-5">
+        <!-- Text and button section -->
+        <h1 class="text fw-bold fs-1">
+          Drive when you<br />
+          want, make what<br />
+          you need
+        </h1>
+        <br />
+        <p class="text">
+          Make money on your schedule with deliveries or rides—or<br />
+          both. You can use your own car or choose a rental<br />
+          through Uber.
+        </p>
+        <button type="button" class="btn btn-lg btn-dark nav-color">
+          Get started
+        </button>
+        <a href="#" class="solutions-link">
+          Already have an account? Sign in
+        </a>
+      </div>
+      <div class="col-2"></div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-4 pe-5 pt-5">
+        <!-- Business section -->
+        <h1 class="text fw-bold fs-1">
+          The Uber you<br />
+          know, reimagined<br />
+          for business
+        </h1>
+        <br />
+        <p class="description text">
+          Uber for Business is a platform for managing global rides and meals,
+          and local deliveries, for companies of any size.
+        </p>
+        <br />
+        <button type="button" class="btn btn-lg btn-dark nav-color">
+          Get started
+        </button>
+        <a href="#" class="solutions-link">Check out our solutions</a>
+      </div>
+      <div class="col-4 ps-5">
+        <!-- Image section -->
+        <img width="100%"
+          src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_576,w_576/v1684887108/assets/76/baf1ea-385a-408c-846b-59211086196c/original/u4b-square.png"
+          alt="Image" />
+      </div>
+      <div class="col-2"></div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-4 pe-5">
+        <!-- Fleet management section -->
+        <img width="100%" class="rounded-3"
+          src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_576,w_576/v1696243819/assets/18/34e6fd-33e3-4c95-ad7a-f484a8c812d7/original/fleet-management.jpg"
+          alt="Image" />
+      </div>
+      <div class="col-4 ps-5 pt-5">
+        <h1 class="text fw-bold fs-1">
+          Make money by renting out<br />
+          your car
+        </h1>
+        <br />
+        <p class="text">
+          Connect with thousands of drivers and earn more per week<br />
+          with Uber's free fleet management tools.
+        </p>
+        <button type="button" class="btn btn-lg btn-dark nav-color">
+          Get started
+        </button>
+      </div>
+      <div class="col-2"></div>
+    </div>
+
+    <br />
+    <br />
+
+    <!-- App download section -->
+    <div style="background-color: #1d2021">
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <br />
+          <br />
+          <h3 class="mb-4 text-white text-start">It's easier in the apps</h3>
+          <div class="d-flex align-items-center p-3" style="background-color: #181a1b; width: 100%">
+            <img
+              src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_188,w_188/v1690807720/assets/a5/9986ad-0d9f-4396-8539-389bce97f579/original/Final-Download-Uber-App.png"
+              alt="QR code for Uber app" class="img-fluid" style="width: 39%; margin-right: 20px" />
+            <div class="text-section" style="flex-grow: 1">
+              <h5 class="mb-1 text-white text-start">
+                Download the Uber app
+              </h5>
+              <p class="mb-0 text-white text-start">Scan to download</p>
+            </div>
+            <div>
+              <i class="bi bi-arrow-right" style="color: white; font-size: 1.5rem"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="d-flex align-items-center p-3" style="background-color: #181a1b; width: 100%; margin-top: 105px">
+            <img
+              src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_188,w_188/v1690813624/assets/50/e85531-2f7e-4ee7-92d4-e39a6801ee2b/original/QR_https___t.uber.com_download-driver-app.png"
+              alt="QR code for Uber app" class="img-fluid" style="width: 39%; margin-right: 20px" />
+            <div class="text-section" style="flex-grow: 1">
+              <h5 class="mb-1 text-white text-start">
+                Download the Driver app
+              </h5>
+              <p class="mb-0 text-white text-start">Scan to download</p>
+            </div>
+            <div>
+              <i class="bi bi-arrow-right" style="color: white; font-size: 1.5rem"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+    </div>
+    <!-- Closing div for the app download section -->
+  </main>
+
+  <!-- Footer section -->
+  <div class="footer text-md-left">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-2">
+        <br />
+        <br />
+        <br />
+        <h5>Uber</h5>
+        <br />
+        <h6>Visit Help Center</h6>
+        <br />
+        <br />
+        <br />
+        <h6>Company</h6>
+        <ul class="list-unstyled" style="line-height: 2.5">
+          <!-- Column 1 -->
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Our offerings</a></li>
+          <li><a href="#">Newsroom</a></li>
+          <li><a href="#">Investors</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <!-- Column 2 -->
+      <div class="col-2" style="margin-top: 213px">
+        <h6>Products</h6>
+        <ul class="list-unstyled" style="line-height: 2.5">
+          <li><a href="#">Ride</a></li>
+          <li><a href="#">Drive</a></li>
+          <li><a href="#">Deliver</a></li>
+          <li><a href="#">Eat</a></li>
+          <li><a href="#">Uber for Business</a></li>
+          <li><a href="#">Uber Freight</a></li>
+          <li><a href="#">Gift cards</a></li>
+        </ul>
+      </div>
+      <!-- Column 3 -->
+      <div class="col-2" style="margin-top: 213px">
+        <h6>Global citizenship</h6>
+        <ul class="list-unstyled" style="line-height: 2.5">
+          <li><a href="#">Safety</a></li>
+          <li><a href="#">Diversity and Inclusion</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </div>
+      <!-- Column 4 -->
+      <div class="col-2" style="margin-top: 213px">
+        <h6>Travel</h6>
+        <ul class="list-unstyled" style="line-height: 2.5">
+          <li><a href="#">Reserve</a></li>
+          <li><a href="#">Cities</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- Social Icons and App Links -->
+    <div class="row mt-4">
+      <div class="col-2"></div>
+      <div class="col-4 text-left">
+        <div style="margin-bottom: 10px">
+          <a href="#" style="margin-right: 15px"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="margin-right: 15px; margin-left: 65px"><i class="bi bi-youtube"></i></a>
+          <a href="#" style="margin-right: 15px; margin-left: 65px"><i class="fa-brands fa-x-twitter"
+              style="color: #ffffff"></i></a>
+          <a href="#" style="margin-right: 15px; margin-left: 65px"><i class="bi bi-linkedin"></i></a>
+          <a href="#" style="margin-right: 15px; margin-left: 65px"><i class="bi bi-instagram"></i></a>
+        </div>
+        <br />
+        <br />
+        <div class="app-links" style="margin-top: 15px">
+          <a href="#"><img
+              src="https://d1a3f4spazzrp4.cloudfront.net/uber-com/1.3.8/d1a3f4spazzrp4.cloudfront.net/illustrations/app-store-google-4d63c31a3e.svg"
+              alt="Google Play" /></a>
+          <a href="#"><img
+              src="https://d1a3f4spazzrp4.cloudfront.net/uber-com/1.3.8/d1a3f4spazzrp4.cloudfront.net/illustrations/app-store-apple-f1f919205b.svg"
+              alt="App Store" /></a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center text-md-right">
+        <div class="location-icons">
+          <span><i class="fas fa-globe"></i> English</span>
+          <span><i class="fas fa-map-marker-alt ms-3"></i> Jamnagar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-left mt-5">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-4">
+          <p>&copy; 2024 Uber Technologies Inc.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-right">
+          <a class="ms-5" href="#">Privacy</a>
+          <a class="ms-3" href="#">Accessibility</a>
+          <a class="ms-3" href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- External JS and icon libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
